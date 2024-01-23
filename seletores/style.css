@@ -1,0 +1,80 @@
+/* seletor universal: asterisco */
+* {
+    margin: 0;  /* margin para todos os lados fica igual a 0 */
+    padding: 0; /* padding para todos os lados fica igual a 0 */
+    /* com essas 2 linhas acima, tiramos os estilos padrão do navegador */
+    /* se vc comparar a parte do header logo abaixo, sem essas 2 linhas do margin e padding, verá a diferença */
+}
+
+/* seletor de tag: altera 2 elementos */
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* seletor de elementos aninhados, pela o elemento "a" da tag "nav" */
+/* obs.: independe do nivel, pode estar imediatamento dentro, ou pode estar dentro de muitos nivels */
+nav a {
+    color: #27ae60;
+}
+
+/* seletor de filhos */
+/* apenas o elemento que está imediatamento dentro de algum elemento(tag) */
+nav > a {
+    display: block;
+    color: #f5a623;
+    padding: 10px;
+}
+
+/* seletor de classes */
+/* é o mais utilizado */
+.laranja {
+    color: #f5a623;
+}
+.verde {
+    color: #27ae60;
+}
+
+/* seletor de id */
+/* o id é exatamente o que vem depois do hashtag, ou seja, é o "secao-principal" */
+#secao-principal {
+    padding: 20px;
+    text-align: center;
+}
+
+/* combinação de seletores */
+/* pega todos os filhos de "secao-principal" */
+#secao-principal > * {
+    margin-top: 10px;
+}
+
+input {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* seletor de sequência */
+/* pega o input que está imediatamente depois de um input, se tem 2 blocos de input, somente o segundo será alterado  */
+input + input {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* o "p" que é alterado, ou seja, o que vem depois */
+/* edita o "p" que está logo após um h2 */
+/* NÃO FUNCIONOU, MESMO ESTANDO IGUAL AO DA AULA */
+h2 + p {
+    padding: 200px;
+}
+
+
+/* seletores de propriedade */
+input[name="email"] {
+    background-color: #f5a623;
+}
+
+input[type="password"] {
+    background-color: #27ae60;
+}
